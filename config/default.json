@@ -1,0 +1,65 @@
+{
+    "host": "localhost",
+    "port": 5001,
+    "public": "../public/",
+    "paginate": {
+        "default": 10,
+        "max": 1000
+    },
+    "authentication": {
+        "entity": "user",
+        "service": "v1/user",
+        "secret": "zll+wfYC91IiDKzkeuUi6Ga7Lik=",
+        "authStrategies": ["jwt", "local"],
+        "jwtOptions": {
+            "header": {
+                "typ": "access"
+            },
+            "audience": "https://yourdomain.com",
+            "issuer": "feathers",
+            "algorithm": "HS256",
+            "expiresIn": "30d"
+        },
+        "local": {
+            "usernameField": "email",
+            "passwordField": "password"
+        }
+    },
+    "mongodb": "mongodb+srv://enhealth_user:enhealth001@cluster0.r6iwr.mongodb.net/enhealth_dev",
+    "otp": {
+        "length": 6,
+        "expireOn": 10,
+        "viewLog": true
+    },
+    "aws": {
+        "accessKeyId": "AKIA4MTWH65E6CCEGD4S",
+        "secretAccessKey": "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",
+        "region": "us-east-1"
+    },
+    "aws_bucket1": "enhealth-test",
+    "aws_bucket_url1": "https://enhealth-test.s3.amazonaws.com/",
+
+    "aws_bucket": "enhealth-new",
+    "aws_bucket_url": "https://enhealth-new.s3.amazonaws.com/",
+    "fcm": {
+        "projectId": "",
+        "clientEmail": "",
+        "privateKey": ""
+    },
+    "agora": {
+        "appId": "4437e0a79c594e9fabb982fc6786fcc8",
+        "appCertificate": "f8d28d2d615245ea895d37649fa6ba41"
+    },
+    "msg91": {
+        "authKey": "",
+        "sendOTPUrl": "https://api.msg91.com/api/v5/otp",
+        "verifyOTPUrl": "https://api.msg91.com/api/v5/otp/verify",
+        "flowUrl": "https://api.msg91.com/api/v5/flow/",
+        "sender": "",
+        "templateId": "",
+        "flow": {
+            "unconfirmedOrderSuccessful": "",
+            "unconfirmedOrderProcessed": ""
+        }
+    }
+}
